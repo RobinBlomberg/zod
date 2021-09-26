@@ -1,4 +1,5 @@
 import { z } from 'zod';
+export type { infer as $infer } from 'zod';
 export { z };
 export declare const $and: <T extends z.ZodTypeAny, U extends z.ZodTypeAny>(left: T, right: U, params?: {
     errorMap?: ((issue: z.ZodIssueOptionalMessage, _ctx: {

@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+export type { infer as $infer } from 'zod';
 export { z };
 
 export const $and = z.intersection;
