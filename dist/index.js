@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.$url = exports.$uuid = exports.$unknown = exports.$undefined = exports.$uint = exports.$tuple = exports.$string = exports.$set = exports.$record = exports.$or = exports.$object = exports.$promise = exports.$port = exports.$regex = exports.$null = exports.$nestring = exports.$map = exports.$int = exports.$instanceof = exports.$function = exports.$enum = exports.$email = exports.$date = exports.$cuid = exports.$boolean = exports.$bigint = exports.$array = exports.$and = void 0;
+exports.$url = exports.$uuid = exports.$unknown = exports.$undefined = exports.$uint = exports.$tuple = exports.$string = exports.$set = exports.$record = exports.$or = exports.$object = exports.$promise = exports.$port = exports.$regex = exports.$null = exports.$nestring = exports.$map = exports.$int = exports.$instanceof = exports.$function = exports.$enum = exports.$email = exports.$date = exports.$cuid = exports.$boolean = exports.$bigint = exports.$array = exports.$and = exports.z = void 0;
 const zod_1 = require("zod");
+Object.defineProperty(exports, "z", { enumerable: true, get: function () { return zod_1.z; } });
 exports.$and = zod_1.z.intersection;
 exports.$array = zod_1.z.array;
 exports.$bigint = zod_1.z.bigint();
