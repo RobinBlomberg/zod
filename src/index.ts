@@ -25,6 +25,8 @@ export const $instanceof = z.instanceof;
 
 export const $int = z.number().int();
 
+export const $literal = z.literal;
+
 export const $map = z.map;
 
 export const $nestring = z.string().nonempty();
