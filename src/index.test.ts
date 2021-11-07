@@ -1,6 +1,14 @@
 import { doesNotThrow, throws } from 'assert';
 import { $ } from '.';
 
+// infer:
+{
+  type Equal<T, U> = T extends U ? (U extends T ? true : false) : false;
+  const assert = <_ extends true>() => void 0;
+  const stringSchema = $.string();
+  assert<Equal<$.infer<typeof stringSchema>, string>>();
+}
+
 // cuid:
 {
   doesNotThrow(() => $.cuid().parse('cjld2cjxh0000qzrmn831i7rn'));
@@ -25,10 +33,10 @@ import { $ } from '.';
   throws(() => $.nestring().parse(''));
 }
 
-// object:
+// obj:
 {
-  doesNotThrow(() => $.object({ foo: $.string() }).parse({ foo: '' }));
-  throws(() => $.object({}).parse({ foo: '' }));
+  doesNotThrow(() => $.obj({ foo: $.string() }).parse({ foo: '' }));
+  throws(() => $.obj({}).parse({ foo: '' }));
 }
 
 // port:
